@@ -2,6 +2,7 @@
 int main () {
     int students;
     int scores [30];
+    int sum=0;
     printf("Enter number of students:");
     scanf("%d",&students);
     if (students < 1 || students > 30) {
@@ -11,6 +12,7 @@ int main () {
     for ( int i=0; i<students; i++)  { 
         printf("Enter score for student%d ",i+1);
         scanf("%d",&scores[i]);
+        sum +=scores[i];
     if (scores[i]>=84) {
         printf("Grade:A\n");
     }else if (scores[i]>=75) {
@@ -27,6 +29,8 @@ int main () {
         printf("You didn't make the cut for direct entry to University.\n");
     }
 }
+float average = (float)sum / students;
+printf("Class average:%.2f\n",average);
     return 0;
 }
 
