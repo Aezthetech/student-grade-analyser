@@ -1,5 +1,17 @@
 # include <stdio.h>
+# include <stdbool.h>
 int main () {
+    bool granted=false;
+    int password;
+    printf("Enter pin");
+    scanf("%d",&password);
+    if (password==1234)
+    granted=true;
+    if (granted)
+    printf("Access granted\n");
+    else
+    printf("Access denied\n");
+    return 1;
     int students;
     int scores [30];
     int sum=0;
